@@ -55,7 +55,7 @@ function PostDetailPage() {
         {post.book_author}{post.publisher ? ` · ${post.publisher}` : ''}
       </Typography>
       <Stack direction="row" gap={1} flexWrap="wrap" sx={{ mt: 2 }}>
-        {post.genres.map((g) => <Chip key={g} label={`#${g}`} color="primary" onClick={() => navigate(`/posts?genre=${encodeURIComponent(g)}`)} />)}
+        {post.genres.map((g) => <Chip key={g} label={`#${g}`} color="primary" sx={{ mr: '2px' }} onClick={() => navigate(`/posts?genre=${encodeURIComponent(g)}`)} />)}
       </Stack>
       {post.summary && (
         <Box sx={{ mt: 3, p: 2, borderRadius: 2, bgcolor: 'primary.light' }}>
