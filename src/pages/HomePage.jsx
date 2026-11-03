@@ -49,7 +49,7 @@ function HomePage() {
 
       <Box sx={{ px: 2 }}>
         <Typography variant="subtitle2" sx={{ mb: 1 }}>어떤 책이 궁금하세요?</Typography>
-        <GenreChips selected="" isWrap={false} onToggle={(genre) => navigate(`/posts?genre=${encodeURIComponent(genre)}`)} />
+        <GenreChips selected="" isWrap={false} gap={0.5}onToggle={(genre) => navigate(`/posts?genre=${encodeURIComponent(genre)}`)} />
       </Box>
 
       <SectionTitle title="🏆 베스트 랭킹" to="/best" />

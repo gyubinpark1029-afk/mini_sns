@@ -2,10 +2,10 @@ import { Chip, Stack } from '@mui/material';
 import { GENRES } from '../lib/constants.js';
 
 // 해시태그 칩 모음. selected는 문자열(단일) 또는 배열(다중) 모두 받는다.
-function GenreChips({ selected, onToggle, isWrap = true }) {
+function GenreChips({ selected, onToggle, isWrap = true, gap = 1 }) {
   const selectedList = Array.isArray(selected) ? selected : [selected];
   return (
-    <Stack direction="row" gap={1} flexWrap={isWrap ? 'wrap' : 'nowrap'} sx={{ overflowX: isWrap ? 'visible' : 'auto' }}>
+    <Stack direction="row" gap={gap} flexWrap={isWrap ? 'wrap' : 'nowrap'} sx={{ overflowX: isWrap ? 'visible' : 'auto' }}>
       {GENRES.map((genre) => {
         const isOn = selectedList.includes(genre);
         return (
