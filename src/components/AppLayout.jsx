@@ -9,7 +9,7 @@ import HomeIcon from '@mui/icons-material/HomeOutlined';
 import ListIcon from '@mui/icons-material/ViewListOutlined';
 import TrophyIcon from '@mui/icons-material/EmojiEventsOutlined';
 import EditIcon from '@mui/icons-material/EditOutlined';
-import PersonIcon from '@mui/icons-material/PersonOutline';
+import PersonIcon from '@mui/icons-material/PersonOutlined';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
