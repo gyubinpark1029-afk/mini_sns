@@ -57,6 +57,12 @@ function PostDetailPage() {
       <Stack direction="row" gap={1} flexWrap="wrap" sx={{ mt: 2 }}>
         {post.genres.map((g) => <Chip key={g} label={`#${g}`} color="primary" onClick={() => navigate(`/posts?genre=${encodeURIComponent(g)}`)} />)}
       </Stack>
+      {post.summary && (
+        <Box sx={{ mt: 3, p: 2, borderRadius: 2, bgcolor: 'primary.light' }}>
+          <Typography variant="caption" color="secondary">줄거리</Typography>
+          <Typography variant="body2" sx={{ mt: 0.5, whiteSpace: 'pre-wrap', lineHeight: 1.7 }}>{post.summary}</Typography>
+        </Box>
+      )}
       <Typography variant="subtitle1" sx={{ mt: 3, fontWeight: 700 }}>{post.title}</Typography>
       <Typography sx={{ mt: 1, whiteSpace: 'pre-wrap', lineHeight: 1.8 }}>{post.caption}</Typography>
       <Rating value={post.rating ?? 0} readOnly size="large" sx={{ mt: 2, color: 'secondary.main' }} />

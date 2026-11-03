@@ -40,7 +40,7 @@ function PostListItem({ post, rank }) {
           color="text.secondary"
           sx={{ mt: 1, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
         >
-          {post.caption}
+          {post.summary || post.caption}
         </Typography>
         <Typography variant="caption" color="text.secondary">
           ♥ {post.likes_count}

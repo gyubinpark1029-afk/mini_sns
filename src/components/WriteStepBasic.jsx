@@ -14,6 +14,7 @@ function WriteStepBasic({ form, onChange }) {
       <TextField label="책 제목" {...bind('bookTitle')} />
       <TextField label="저자" {...bind('bookAuthor')} />
       <TextField label="출판사" {...bind('publisher')} />
+      <TextField label="책 줄거리 / 명대사" multiline minRows={3} {...bind('summary')} />
       <TextField label="내용" multiline minRows={6} {...bind('caption')} />
       <Box>
         <Typography variant="body2" color="text.secondary">별점</Typography>

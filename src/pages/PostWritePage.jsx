@@ -11,7 +11,7 @@ import { DRAFT_KEY, UNSPLASH_IMAGES } from '../lib/constants.js';
 const STEPS = ['내용 쓰기', '이미지 선택', '장르 태그'];
 const today = () => new Date().toISOString().slice(0, 10);
 const EMPTY_FORM = {
-  title: '', bookTitle: '', bookAuthor: '', publisher: '', caption: '',
+  title: '', bookTitle: '', bookAuthor: '', publisher: '', summary: '', caption: '',
   rating: 0, readDate: today(), imageUrl: UNSPLASH_IMAGES[0], genres: [],
 };
 
@@ -52,6 +52,7 @@ function PostWritePage() {
       const post = await createPost({
         user_id: profile.id, title: form.title.trim(), caption: form.caption.trim(),
         book_title: form.bookTitle.trim(), book_author: form.bookAuthor.trim(), publisher: form.publisher.trim(),
+        summary: form.summary.trim(),
         genres: form.genres, rating: form.rating || null, read_date: form.readDate || null, image_url: form.imageUrl,
       });
       localStorage.removeItem(DRAFT_KEY);
