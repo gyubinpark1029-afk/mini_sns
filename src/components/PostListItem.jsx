@@ -17,7 +17,7 @@ function PostListItem({ post, rank }) {
           component="img"
           src={post.image_url || NO_IMAGE}
           alt={`${post.book_title} 표지`}
-          sx={{ width: 80, height: 112, objectFit: 'cover', borderRadius: 1, display: 'block' }}
+          sx={{ width: 80, height: 120, objectFit: 'cover', borderRadius: 1, display: 'block' }}
         />
         {rank && (
           <Typography
