@@ -35,7 +35,7 @@ function HomePage() {
             component="img"
             src={pick?.image_url || NO_IMAGE}
             alt=""
-            sx={{ width: 96, height: 128, objectFit: 'cover', borderRadius: 1, boxShadow: 2 }}
+            sx={{ width: 96, height: 128, flexShrink: 0, objectFit: 'cover', borderRadius: 1, boxShadow: 2 }}
           />
           <Box sx={{ minWidth: 0 }}>
             <Typography variant="h6">{pick?.book_title ?? '불러오는 중...'}</Typography>
